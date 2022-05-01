@@ -1,0 +1,27 @@
+﻿<Window x:Class="ProyectoFinal.WinInsertarEmpleados"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoFinal"
+        mc:Ignorable="d"  
+        WindowStyle="None"
+        Title="Window1" Height="1080" Width="1920" WindowState="Maximized">
+    <Grid>
+        <Button x:Name="btnSiguiente" Content="Siguiente" HorizontalAlignment="Left" Margin="380,0,0,100" VerticalAlignment="Bottom" Height="80" Width="220" FontSize="24" FontWeight="Bold" Click="btnSiguiente_Click"/>
+        <Button x:Name="btnAnterior" Content="Anterior" HorizontalAlignment="Left" Margin="100,0,0,100" Width="220" FontSize="24" FontWeight="Bold" Height="80" VerticalAlignment="Bottom" Click="btnAnterior_Click"/>
+        <Image x:Name="imgEmpleado" HorizontalAlignment="Left" Height="150px" Margin="100,100,0,0" VerticalAlignment="Top" Width="150px" Cursor="Arrow" AllowDrop="True"  />
+        <Button x:Name="btnInsertarImg" Content="INSERTAR IMAGEN" HorizontalAlignment="Left" Margin="100,270,0,0" VerticalAlignment="Top" Height="35" Width="150"/>
+        <Button x:Name="btnBorrarImg" Content="BORRAR IMAGEN" HorizontalAlignment="Left" Margin="100,315,0,0" VerticalAlignment="Top" Height="35" Width="150"/>
+        <Label x:Name="lblNombre" Content="Nombre" HorizontalAlignment="Left" Margin="610,150,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="734,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="24"/>
+        <Button x:Name="btnSalir" Content="Salir" Margin="0,0,100,100" VerticalAlignment="Bottom" Height="80" FontSize="24" FontWeight="Bold" HorizontalAlignment="Right" Width="220" Click="btnSalir_Click"/>
+        <Label x:Name="lblApellidos" Content="Apellidos" HorizontalAlignment="Left" Margin="1131,150,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="txtApellidos" Margin="1270,150,150,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="24"/>
+        <Label x:Name="lblId" Content="Id" HorizontalAlignment="Left" Margin="350,150,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="txtiD" HorizontalAlignment="Left" Margin="398,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="24"/>
+        <Rectangle HorizontalAlignment="Left" Height="150" Margin="100,100,0,0" Stroke="Black" VerticalAlignment="Top" Width="150"/>
+    </Grid>
+
+</Window>
+    
