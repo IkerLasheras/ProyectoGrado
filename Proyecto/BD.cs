@@ -12,14 +12,14 @@ namespace Proyecto
 {
     public class BD
     {
-        public SqlConnection CrearConexion(string connectionString)
+        public static SqlConnection CrearConexion(string connectionString)
         {
             SqlConnection connection = new SqlConnection(connectionString);
 
             return connection;
         }
 
-        public void AbrirConexion(SqlConnection connection, SqlCommand command)
+        public static void  AbrirConexion(SqlConnection connection, SqlCommand command)
         {
             command.Connection.Open();
         }
@@ -27,16 +27,16 @@ namespace Proyecto
         {
             connection.Close();
         }
-        public SqlCommand CrearComando(SqlConnection connection, string script)
+        public static SqlCommand CrearComando(SqlConnection connection, string script)
         {
             return new SqlCommand(script, connection);
         }
-        public SqlDataAdapter CrearDataAdapter(SqlCommand command)
+        public static SqlDataAdapter CrearDataAdapter(SqlCommand command)
         {
             return new SqlDataAdapter(command);
         }
 
-        public DataTable CrearDataTable(SqlDataAdapter da)
+        public static DataTable CrearDataTable(SqlDataAdapter da)
         {
             DataTable dt = new DataTable();
             return dt;
@@ -44,7 +44,7 @@ namespace Proyecto
 
         public void ImprimirDatos()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["PruebaCasa"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["proyecto"].ConnectionString;
             string script = "SELECT * FROM dbo.platos";
             SqlConnection connection = CrearConexion(connectionString);
             SqlCommand command = CrearComando(connection, script);
